@@ -1,0 +1,41 @@
+body { margin:0; padding:0; font-size: 12px;}
+
+.map{
+  position: absolute;
+  top:0;
+  width:100%;
+  height: 100vh;
+}
+
+// Colors
+$colors: (
+  green: (
+    base: #78BB36
+  ),
+  tan: (
+    base: #D1B99C,
+    light: #DAC7AF,
+    dark: #64594D
+  ),
+  grey: (
+    base: #808080
+  ),
+  blue: (
+    base: #40B1F4
+  ),
+  orange: (
+    base: #FF8736
+  ),
+  red: (
+    base: #FF0201
+  ),
+  purple: (
+    base: #730091
+  )
+);
+
+// fonts
+$fonts: (
+  montserrat: ('Montserrat', sans-serif),
+  lato: ('Lato', sans-serif)
+);

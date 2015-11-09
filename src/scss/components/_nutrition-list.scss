@@ -1,0 +1,34 @@
+.nutrition-list{
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.nutrition-list span{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  font-family: font(lato);
+  color: color(grey);
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-left: 1.4em;
+  margin-bottom: 0.75rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.nutrition-list span::before{
+  content: ' \25CF';
+  font-size: 2em;
+  position: absolute;
+  line-height: 0;
+  left: 0;
+  top: 50%;
+  bottom: 50%;
+}
+
+.nutrition-list span.fruit::before{ color: color(blue); }
+.nutrition-list span.dairy::before{ color: color(orange); }
+.nutrition-list span.protein::before{ color: color(red); }
+.nutrition-list span.grains::before{ color: color(purple); }
+.nutrition-list span.vegetables::before{ color: color(green); }

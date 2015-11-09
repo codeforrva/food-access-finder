@@ -1,0 +1,13 @@
+a{
+  color: color(blue);
+  text-decoration: none;
+}
+
+#content.results{
+  overflow-y: scroll;
+}
+
+.flex-container{
+  display: flex;
+  align-items: center;
+}

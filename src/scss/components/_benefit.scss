@@ -1,0 +1,20 @@
+.benefits{
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.benefit{
+  border: 2px solid color(grey);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  font-family: font(lato);
+  text-transform: uppercase;
+  margin-right: 0.75rem;
+  font-size: 0.95rem;
+  color: color(grey);
+}
+
+.benefit.active{
+  color: color(orange);
+  border-color: color(orange);
+}

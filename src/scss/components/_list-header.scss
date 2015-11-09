@@ -1,0 +1,30 @@
+.list-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  background-color: color(green);
+  align-items: center;
+}
+
+.list-header i{
+  width: 10%;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.list-header .fa-filter{
+  text-align: left;
+}
+
+.list-header .fa-search{
+  text-align: right;
+}
+
+.list-header input{
+  width: 75%;
+  border: none;
+  font-size: 1.15rem;
+  font-family: font(lato);
+  font-weight: 400;
+  padding: 0.25rem;
+}
