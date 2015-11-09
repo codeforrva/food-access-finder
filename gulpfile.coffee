@@ -28,3 +28,5 @@ gulp.task 'sass:watch', () ->
 gulp.task 'watch', ['browserify:watch', 'sass:watch']
 
 gulp.task 'default', ['watch']
+
+gulp.task 'build', ['browserify', 'sass']
