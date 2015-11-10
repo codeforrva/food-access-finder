@@ -5,16 +5,17 @@ plumber    = require 'gulp-plumber'
 sass       = require 'gulp-sass'
 
 gulp.task 'browserify', () ->
-  gulp.src 'src/main.js',
+  gulp.src 'src/main.coffee',
     read: false
   .pipe plumber()
   .pipe browserify
-    transform: ['reactify']
+    transform: ['coffeeify', 'jadeify']
   .pipe concat 'main.js'
   .pipe gulp.dest './dist/js'
 
 gulp.task 'browserify:watch', () ->
-  gulp.watch './src/**/*.js', ['browserify']
+  gulp.watch './src/**/*.coffee', ['browserify']
+  gulp.watch './src/**/*.jade', ['browserify']
 
 gulp.task 'sass', () ->
   gulp.src 'src/scss/app.scss'
@@ -30,3 +31,12 @@ gulp.task 'watch', ['browserify:watch', 'sass:watch']
 gulp.task 'default', ['watch']
 
 gulp.task 'build', ['browserify', 'sass']
+
+gulp.task "browserify:client", () ->
+  gulp.src 'src/templates/store_detail.jade',
+    read: false
+  .pipe plumber()
+  .pipe browserify
+    transform: ['jadeify']
+  .pipe concat 'store_detail.js'
+  .pipe gulp.dest './dist/templates'

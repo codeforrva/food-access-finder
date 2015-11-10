@@ -16,7 +16,7 @@ var storeDetail = React.createClass({
         <div className="strore-detail__header">
           <i className="fa fa-map-marker"></i>
           <div className="store-detail__info">
-            <h2>{_store.name} • {_distance}</h2>
+            <h2>{_store.title} • {_distance}</h2>
           </div>
           <i className="fa fa-times-circle-o store-detail__close" onClick={this.distroyDetail}></i>
         </div>

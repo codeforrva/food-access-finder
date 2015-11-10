@@ -33,7 +33,7 @@ var LocationForm = React.createClass({
         document.getElementById('map').style.position = "relative";
         $('#content').addClass('results');;
         _globals.setMarkers(data.stores);
-        ReactDOM.render(<ListHeader locationQuery={locationQuery} />, document.getElementById('list-header'));
+        ReactDOM.render(<ListHeader locationQuery={locationQuery} showStores={_this.props.showStores} />, document.getElementById('list-header'));
       });
   }
 });

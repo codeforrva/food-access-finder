@@ -26,6 +26,7 @@
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.1.0",
     "jade": "^1.11.0",
+    "jadeify": "^4.4.0",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
     "mapbox": "^0.10.0",

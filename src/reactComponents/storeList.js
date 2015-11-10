@@ -10,14 +10,13 @@ var Store = React.createClass({
     $('#store-detail').addClass('active');
   },
   render: function(){
-    console.log(this.props.store);
     var _className = "store " + this.props.store.evenOdd;
     var _store = this.props.store.properties;
     return (
       <div className={_className} onClick={this.renderStoreDetail}>
         <i className="fa fa-map-marker"></i>
         <div className="store__info">
-          <h2>{_store.name} • {_store.distance}</h2>
+          <h2>{_store.title} • {_store.distance}</h2>
           <p>{_store.category}</p>
         </div>
         <span className="fa-stack fa-lg">
@@ -35,7 +34,7 @@ var StoreList = React.createClass({
       store.properties.distance = String(_.round(store.distance, 2)) + "mi";
       store.evenOdd = (index+1) % 2 == 0 ? "even" : "odd";
       return(
-        <Store key={store.properties.name} store={store} />
+        <Store key={store.properties.title} store={store} />
       );
     });
     return (

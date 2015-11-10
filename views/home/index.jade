@@ -1,8 +1,16 @@
 extends ./main.jade
 
 block content
-  #list-header
+  div(class="list-header hidden")
+    i(class="fa fa-filter")
+    input(type="text" name="location-header")
+    i(class="fa fa-search update-submit")
   #map(class="map form")
   #content
+    div(class="location-form")
+      h1 Food for Health
+      form(id="find-location")
+        input(type="text" ref="location" id="location-input" class="search" placeholder="Enter a Location")
+        button(id="location-submit" type="submit" class="submit") Search
   #store-detail
   

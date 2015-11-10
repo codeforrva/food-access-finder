@@ -1,13 +1,13 @@
 require('mapbox.js');
-var React          = require('react');
-var ReactDOM       = require('react-dom');
+// var React          = require('react');
+// var ReactDOM       = require('react-dom');
+// var LocationFinder = require('./components/locationFinder');
 var $              = require('jquery');
-var LocationFinder = require('./components/locationFinder');
 var _globals       = require('./globals.js')
 
 
 $(document).ready(function(){
-  ReactDOM.render(<LocationFinder />, document.getElementById('content'));
+  // ReactDOM.render(<LocationFinder />, document.getElementById('content'));
   console.log("Document Ready");
   // Provide your access token
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29kZWZvcnJ2YSIsImEiOiI2Zl90Nk53In0.Z5abzPIO5z45GKyaizMFIg';

@@ -6,15 +6,17 @@
       "coordinates": [-77.451572, 37.546194]
     },
     "properties":{
-      "name": "Frist address",
+      "title": "Frist address",
       "address": {
         "streetAddress": "6 Laurel Street",
         "city": "Richmond",
         "state": "VA",
         "zip": 23220
       },
+      "marker-color": "#fff",
       "phone": "804-123-4567",
-      "category": "Healthy Food Store"
+      "category": "healthy_corner_store",
+      "_id": 1
     }
   },
   {
@@ -24,7 +26,7 @@
       "coordinates": [-77.47493309999999, 37.5557658]
     },
     "properties":{
-      "name": "Virginia Museum of Fine Arts",
+      "title": "Virginia Museum of Fine Arts",
       "address": {
         "streetAddress": "200 N Boulevard",
         "city": "Richmond",
@@ -32,7 +34,8 @@
         "zip": "23220"
       },
       "phone": "804-123-4567",
-      "category": "Healthy Food Store"
+      "category": "farmers_market",
+      "_id": 2
     }
   },
   {
@@ -42,7 +45,7 @@
       "coordinates": [-77.4690076, 37.5702444]
     },
     "properties":{
-      "name": "INM United",
+      "title": "INM United",
       "address": {
         "streetAddress": "1805 Highpoint Ave",
         "city": "Richmond",
@@ -50,7 +53,8 @@
         "zip": "23230"
       },
       "phone": "804-123-4567",
-      "category": "Healthy Food Store"
+      "category": "healthy_corner_store",
+      "_id": 3
     }
   },
   {
@@ -60,7 +64,7 @@
       "coordinates": [-77.4439914, 37.5465963]
     },
     "properties":{
-      "name": "Quirk Hotel",
+      "title": "Quirk Hotel",
       "address": {
         "streetAddress": "201 West Broad Street",
         "city": "Richmond",
@@ -68,7 +72,8 @@
         "zip": "23220"
       },
       "phone": "804-123-4567",
-      "category": "Healthy Food Store"
+      "category": "healthy_corner_store",
+      "_id": 4
     }
   }
 ]
