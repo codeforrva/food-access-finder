@@ -26,4 +26,4 @@ app.use '/', homeRoutes
 # Locations routes
 app.use '/locations', locationRoutes
 
-app.listen '3000'
+app.listen env.process.port || 3000
