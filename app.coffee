@@ -1,4 +1,4 @@
-require('dotenv').load();
+require('dotenv').config({silent: true});
 express = require 'express'
 app = express()
 morgan = require 'morgan'
