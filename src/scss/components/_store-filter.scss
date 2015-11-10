@@ -1,0 +1,83 @@
+.store-filter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background: #fff;
+  padding: 2rem 1rem;
+  z-index: 20;
+  box-sizing: border-box;
+
+  &.hidden{
+    z-index: -1;
+    opacity: 0;
+    padding: 0;
+  }
+}
+
+.store-filter__toggles{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  span{
+    font-family: font(lato);
+    color: color(green);
+    font-size: 1rem;
+    &:first-child{
+      margin-right: 1.5rem;
+    }
+  }
+  span i{
+    margin-right: 3px;
+  }
+}
+
+.store-filter h1{
+  text-align: center;
+  font-family: font(montserrat);
+  color: color(green);
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.store-filter__group{
+  margin-bottom: 2rem;
+  color: color(green);
+}
+
+.store-filter__group h2{
+    font-family: font(montserrat);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.store-filter__group label{
+  font-family: font(lato);
+  font-size: 1rem;
+}
+
+.store-filter__group input{
+  margin-right: 0.5rem;
+}
+
+.store-filter .checkbox{
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.store-filter__actions button{
+  transition: all 0.35s ease;
+  background-color: color(green);
+  color: #fff;
+  font-family: font(montserrat);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: none;
+  &:hover{
+    background-color: lighten(color(green), 10);
+  }
+}

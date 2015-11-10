@@ -2,7 +2,7 @@ div(class="store-detail")
   div(class="strore-detail__header")
     i(class="fa fa-map-marker")
     div(class="store-detail__info")
-      h2!= store.properties.title
+      h2 #{store.properties.title} • #{store.properties.distance}
     i(class="fa fa-times-circle-o store-detail__close")
   div(class="store-detail__content")
     div(class="flex-container")

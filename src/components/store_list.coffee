@@ -34,6 +34,6 @@ module.exports.formatStores = (stores) ->
     stores[index] = store
   return stores
 
-module.exports.createList = (stores) ->
+module.exports.render = (stores) ->
   $('#content').empty().append store_list
     stores: stores

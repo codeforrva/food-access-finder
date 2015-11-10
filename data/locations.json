@@ -75,5 +75,43 @@
       "category": "healthy_corner_store",
       "_id": 4
     }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-77.474859, 37.516553]
+    },
+    "properties":{
+      "title": "South of the James Farmer's Market",
+      "address": {
+        "streetAddress": "4021 Forest Hill Ave",
+        "city": "Richmond",
+        "state": "VA",
+        "zip": "23225"
+      },
+      "phone": "804-123-4567",
+      "category": "farmers_market",
+      "_id": 5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [-77.427504, 37.534246]
+    },
+    "properties":{
+      "title": "Historic 17th Street Farmers Market",
+      "address": {
+        "streetAddress": "100 N. 17th Street",
+        "city": "Richmond",
+        "state": "VA",
+        "zip": "23219"
+      },
+      "phone": "804-123-4567",
+      "category": "farmers_market",
+      "_id": 6
+    }
   }
 ]

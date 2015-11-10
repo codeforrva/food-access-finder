@@ -5,6 +5,7 @@ map_helpers = require './map_helpers.coffee'
 _config =
   location_form: "#find-location"
   update_submit: ".update-submit"
+  filter: ".fa-filter"
 
 updateListHeader = (location_query) ->
   $('.list-header').removeClass('hidden')
@@ -19,7 +20,7 @@ findStores = (location_query, is_update) ->
     _stores = store_list.formatStores data
     window._stores = _stores
     window._location_query = location_query
-    store_list.createList _stores
+    store_list.render _stores
     document.getElementById('map').style.height = "40vh"
     document.getElementById('map').style.position = "relative"
     $('#content').addClass 'results'
@@ -34,3 +35,5 @@ $(document).ready () ->
   $(_config.update_submit).click (e) ->
     _value = $('input[name=location-header]').val()
     findStores _value, true
+  $(_config.filter).click (e) ->
+    $('.store-filter').removeClass "hidden"
