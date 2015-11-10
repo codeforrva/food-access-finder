@@ -1,13 +1,24 @@
-store_detail = require '../templates/store_detail.jade'
-_            = require 'lodash'
-$            = require 'jquery'
+# ----------------------------------
+# Store Detail Component
+#
+# containes logic for store detail view
+# ----------------------------------
 
+# dependencies
+store_detail = require '../templates/store_detail.jade'
+$            = require 'jquery'
+_            = require 'lodash'
+
+# returns store object with given id
+#
+# @param {integer} id
 getStoreById = (id) ->
   _store = _.find window._stores, (store) ->
     _id = parseInt store.properties._id
     return  _id == id
   return _store
 
+# Sets events listeners and function execution
 $(document).ready ()->
   # show Detail
   $('#content').on 'click', '.store', (e) ->

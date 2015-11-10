@@ -3,7 +3,7 @@ express = require 'express'
 app = express()
 morgan = require 'morgan'
 bodyParser = require 'body-parser'
-locationRoutes = require './routes/locations'
+storeRoutes = require './routes/stores'
 homeRoutes = require './routes/home'
 
 # Jade Engine
@@ -24,6 +24,6 @@ app.use bodyParser.urlencoded
 app.use '/', homeRoutes
 
 # Locations routes
-app.use '/locations', locationRoutes
+app.use '/stores', storeRoutes
 
 app.listen process.env.PORT || 3000

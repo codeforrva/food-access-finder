@@ -1,7 +1,14 @@
-express = require 'express'
-router = express.Router()
+# ----------------------------------
+# Home Router
+#
+# all root-level routes
+# ----------------------------------
 
-# define the home page route
+# dependencies
+express = require 'express'
+router  = express.Router()
+
+# defines the home page route
 router.get '/', (req, res) ->
   res.render 'home/index'
 
