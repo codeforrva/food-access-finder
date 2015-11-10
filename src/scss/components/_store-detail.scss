@@ -5,11 +5,12 @@
 }
 
 #store-detail.active{
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   background: #fff;
   height: 100%;
+  overflow-y: scroll;
   z-index: 1000;
   opacity: 1;
 }
