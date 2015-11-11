@@ -19,7 +19,10 @@ _          = require 'lodash'
 getBaseLocation = (queryString, callback) ->
   mapbox.geocodeForward queryString, (err, res) ->
     throw err if err
-    callback? res.features[0]
+    if res.features.length == 0
+      callback? null
+    else
+      callback? res.features[0]
 
 # returns all stores
 #
@@ -37,13 +40,16 @@ module.exports.all = all = (callback) ->
 module.exports.sortByDistance = (queryString, callback) ->
   # geocode location
   getBaseLocation queryString, (baseLocation) ->
-    # get all stores
-    all (stores) ->
-      # foreach location, get distance
-      _.forEach stores, (store, index) ->
-        store.distance = turf.distance store, baseLocation
-        stores[index] = store
-      # sort stores by distance
-      sortedStores = _.sortBy stores, (store, index, stores) ->
-        return store.distance
-      callback? sortedStores
+    if baseLocation
+      # get all stores
+      all (stores) ->
+        # foreach location, get distance
+        _.forEach stores, (store, index) ->
+          store.distance = turf.distance store, baseLocation
+          stores[index] = store
+        # sort stores by distance
+        sortedStores = _.sortBy stores, (store, index, stores) ->
+          return store.distance
+        callback? sortedStores
+    else
+      callback? {}

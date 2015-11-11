@@ -9,12 +9,15 @@
 $           = require 'jquery'
 store_list  = require './store_list.coffee'
 map_helpers = require './map_helpers.coffee'
+error_message = require '../templates/error_message.jade'
 
 # config object
 _config =
   location_form: "#find-location"
   update_submit: ".update-submit"
   filter: ".fa-filter"
+  errors:
+    noLocation: "No Location could be determined from this request. Please try again"
 
 # Updates display state of list-header, and adds
 # location query as input value
@@ -23,6 +26,10 @@ _config =
 updateListHeader = (location_query) ->
   $('.list-header').removeClass('hidden')
   $('input[name=location-header]').attr "value", location_query
+
+showError = ->
+ $(_config.location_form).before error_message
+  message: _config.errors.noLocation
 
 # makes ajax request to geocode location query
 # and formats return data for display
@@ -36,18 +43,21 @@ findStores = (location_query, is_update) ->
   $.post '/stores/byDistance',
     query: location_query
   .done (data) ->
-    # format store data to be display friendly
-    _stores = store_list.formatStores data
-    # add stores to global object
-    window._stores = _stores
-    # add location query to global object
-    window._location_query = location_query
-    # render store list
-    store_list.render _stores
-    # update list header
-    updateListHeader location_query
-    # set map markers
-    map_helpers.setMarkers _stores, is_update
+    if data.length > 0
+      # format store data to be display friendly
+      _stores = store_list.formatStores data
+      # add stores to global object
+      window._stores = _stores
+      # add location query to global object
+      window._location_query = location_query
+      # render store list
+      store_list.render _stores
+      # update list header
+      updateListHeader location_query
+      # set map markers
+      map_helpers.setMarkers _stores, is_update
+    else
+      showError()
 
 # sets event listeners
 $(document).ready ->

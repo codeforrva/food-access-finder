@@ -17,6 +17,6 @@ router.get '/', (req, res) ->
 # sorts By distance
 router.post '/byDistance', (req, res) ->
   Stores.sortByDistance req.body.query, (stores) ->
-    res.json stores
+      res.json stores
 
 module.exports = router
