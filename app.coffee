@@ -26,4 +26,9 @@ app.use '/', homeRoutes
 # Locations routes
 app.use '/stores', storeRoutes
 
+# robots.txt
+app.get '/robots.txt', (req, res) ->
+    res.type 'text/plain'
+    res.send "User-agent: *\nDisallow: /"
+
 app.listen process.env.PORT || 3000
