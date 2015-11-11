@@ -6,7 +6,7 @@
       "coordinates": [-77.451572, 37.546194]
     },
     "properties":{
-      "title": "Frist address",
+      "title": "Healthy Corner Store",
       "address": {
         "streetAddress": "6 Laurel Street",
         "city": "Richmond",
@@ -26,7 +26,7 @@
       "coordinates": [-77.47493309999999, 37.5557658]
     },
     "properties":{
-      "title": "Virginia Museum of Fine Arts",
+      "title": "VMFA Farmer's Market",
       "address": {
         "streetAddress": "200 N Boulevard",
         "city": "Richmond",
@@ -45,7 +45,7 @@
       "coordinates": [-77.4690076, 37.5702444]
     },
     "properties":{
-      "title": "INM United",
+      "title": "INM United Corner Store",
       "address": {
         "streetAddress": "1805 Highpoint Ave",
         "city": "Richmond",
@@ -64,7 +64,7 @@
       "coordinates": [-77.4439914, 37.5465963]
     },
     "properties":{
-      "title": "Quirk Hotel",
+      "title": "Quirk's Corner Store",
       "address": {
         "streetAddress": "201 West Broad Street",
         "city": "Richmond",
