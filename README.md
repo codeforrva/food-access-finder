@@ -22,6 +22,14 @@ Install dependencies
     $ npm install -g gulp
     $ npm install -g coffee-script
 
+Add local environment variables by creating a `.env` file in the project root directory.
+
+add a variable `MAPBOX_SECRET_KEY` to the file.  Ask [Adam](mailto:adam@codeforamerica.com) (can also be found on Slack) for the api key.
+
+The final `.env` should look like this:
+
+    MAPBOX_SECRET_KEY=<api key>
+
 Run application
 
     $ npm start
