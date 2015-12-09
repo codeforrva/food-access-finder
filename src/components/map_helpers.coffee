@@ -14,13 +14,7 @@ module.exports.setMarkers = (storeData, is_update) ->
   is_update = is_update || false
   # Set data as layer's geoJSON
   _layer = window.storeLayer.setGeoJSON storeData
-  # if map size isn't changing (is_update == true)
-  # then don't pad bounds
-  # @TODO: determine why padding is needed
-  if is_update
-    _bounds = _layer.getBounds().pad 0
-  else
-    _bounds = _layer.getBounds().pad 1
+  _bounds = _layer.getBounds()
   # Fit map to markers
   window.map.fitBounds _bounds
   # Force re draw of map due to change

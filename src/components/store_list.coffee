@@ -13,12 +13,17 @@ $          = require 'jquery'
 _config =
   # maps category machine name with human name
   categoryMap:
-    "healthy_corner_store" : "Healthy Corner Store"
-    "farmers_market": "Farmer's Market"
+    snap : "SNAP Vendor"
+    farmers_market: "Farmer's Market"
+    healthy_corner_store: "Healthy Corner Store"
+    wic: "WIC Vendor"
+
   # maps icon color with category machine name
   iconColorMap:
-    "healthy_corner_store" : "#FF8736"
-    "farmers_market" : "#78BB36"
+    healthy_corner_store : "#FF8736"
+    farmers_market : "#78BB36"
+    snap: '#78BB36'
+    wic: '#78BB36'
 
 # returns marker color given a store's
 # category
@@ -54,7 +59,7 @@ module.exports.formatStores = (stores) ->
     store.properties.category =
       raw: stores[index].properties.category
       formatted: format_category stores[index].properties.category
-    store.properties.distance = format_distance stores[index].distance
+    store.properties.distance = format_distance stores[index].properties.distance
     stores[index] = store
   return stores
 

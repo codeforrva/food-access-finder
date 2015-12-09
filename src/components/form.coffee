@@ -40,12 +40,12 @@ findStores = (location_query, is_update) ->
   # new stores, not an update
   is_update = is_update || false
   # ajax request
-  $.post '/stores/byDistance',
+  $.post '/api/stores',
     query: location_query
-  .done (data) ->
-    if data.length > 0
+  .done (res) ->
+    if res.data.stores.length > 0
       # format store data to be display friendly
-      _stores = store_list.formatStores data
+      _stores = store_list.formatStores res.data.stores
       # add stores to global object
       window._stores = _stores
       # add location query to global object

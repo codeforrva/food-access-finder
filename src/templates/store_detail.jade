@@ -7,9 +7,10 @@ div(class="store-detail")
   div(class="store-detail__content")
     div(class="flex-container")
       div(class="store-detail__basic-info")
-        p!= store.properties.address.streetAddress
+        p!= store.properties.address.street
         p #{store.properties.address.city}, #{store.properties.address.state} #{store.properties.address.zip}
-        a(class="store-detail__basic-info__phone" href="tel:" + store.properties.phone) #{store.properties.phone}
+        if store.properties.phone
+          a(class="store-detail__basic-info__phone" href="tel:" + store.properties.phone) #{store.properties.phone}
       img(class="store-detail__basic-info__icon" src="/img/navigation-icon.png")
     hr
     h3(class="store-detail__subheader") Nutrition Availability
@@ -24,7 +25,4 @@ div(class="store-detail")
     hr
     h3(class="store-detail__subheader") Benefits Welcome
     div(class="flex-container benefits")
-      span(class="benefit active") SNAP
-      span(class="benefit") EBT
-      span(class="benefit active") WIC
-      span(class="benefit") 2x Bucks
+      span(class="benefit active")!= store.properties.category.formatted

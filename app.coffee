@@ -1,10 +1,11 @@
 require('dotenv').config({silent: true});
-express = require 'express'
-app = express()
-morgan = require 'morgan'
-bodyParser = require 'body-parser'
-storeRoutes = require './routes/stores'
-homeRoutes = require './routes/home'
+express       = require 'express'
+app           = express()
+morgan        = require 'morgan'
+bodyParser    = require 'body-parser'
+storeRoutes   = require './routes/stores'
+homeRoutes    = require './routes/home'
+errorhandler  = require 'errorhandler'
 
 # Jade Engine
 app.set 'views', './views' # specify the views directory
@@ -24,11 +25,18 @@ app.use bodyParser.urlencoded
 app.use '/', homeRoutes
 
 # Locations routes
-app.use '/stores', storeRoutes
+app.use '/api/stores', storeRoutes
 
 # robots.txt
 app.get '/robots.txt', (req, res) ->
     res.type 'text/plain'
     res.send "User-agent: *\nDisallow: /"
+
+# 404 pages
+app.use (req, res) ->
+  res.status(404).send('Sorry cant find that!');
+});
+
+app.use errorhandler()
 
 app.listen process.env.PORT || 3000
