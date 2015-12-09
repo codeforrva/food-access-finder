@@ -34,8 +34,7 @@ app.get '/robots.txt', (req, res) ->
 
 # 404 pages
 app.use (req, res) ->
-  res.status(404).send('Sorry cant find that!');
-});
+  res.status(404).send 'Sorry cant find that!'
 
 app.use errorhandler()
 
