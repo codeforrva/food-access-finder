@@ -1,3 +1,9 @@
+# ----------------------------------
+# storeHelpers
+#
+# Handles data tranformations and other helper functions
+# ----------------------------------
+
 # dependencies
 require 'dotenv'
 turf         = require 'turf'
@@ -6,6 +12,12 @@ mapbox       = new MboxClient process.env.MAPBOX_SECRET_KEY
 errorHelpers = require "./errorHelpers.coffee"
 _            = require "lodash"
 
+# Middleware that returns geocoded location object
+# given a query string
+#
+# @param {obj} response object
+# @param {obj} response object
+# @param {function} next function
 getBaseLocation = (req, res, next) ->
   _query = req.body.query
   mapbox.geocodeForward _query, (err, response) ->
@@ -16,6 +28,11 @@ getBaseLocation = (req, res, next) ->
       req.baseLocation = response.features[0]
       next()
 
+# Returns a formatted store object suitable for
+# public api
+#
+# @param {obj} store object
+# @param {obj} baseLocation object
 transform = (store, baseLocation) ->
   _store =
     properties:
@@ -36,23 +53,44 @@ transform = (store, baseLocation) ->
   _store.type = "Feature"
   return _store
 
+# returns an array of stores suitable for
+# public domain
+#
+# @param {array} store collection
+# @param {obj} baseLocation object
 transformCollection = (storeCollection, baseLocation) ->
   return sortByDistance storeCollection.map (store) ->
     transform store, baseLocation
 
+# Returns json response with a error object and message
+#
+# @param {res} response object
+# @param {int} http status code to return
+# @param {string} message to return
 transformCollectionGeoJSON = (storeCollection, baseLocation) ->
   return sortByDistance storeCollection.map (store) ->
     transformGeoJSON store, baseLocation
 
+# Returns json response with a error object and message
+#
+# @param {res} response object
+# @param {int} http status code to return
+# @param {string} message to return
 calculatateDistance = (baseLocation, store) ->
   store.type = "Feature"
   store.properties = {}
   store.geometry = store.geography
   return turf.distance store, baseLocation
 
+# Returns json response with a error object and message
+#
+# @param {res} response object
+# @param {int} http status code to return
+# @param {string} message to return
 sortByDistance = (storeCollection) ->
   return _.sortBy storeCollection, (store) ->
     return store.distance
+
 
 module.exports.getBaseLocation = getBaseLocation
 module.exports.transform = transform
