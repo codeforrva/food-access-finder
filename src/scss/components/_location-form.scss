@@ -15,26 +15,28 @@
 }
 
 .location-form h1{
-  font-family: font(lato);
+  font-family: font(titillium);
   color: #fff;
-  font-size: 2.25rem;
+  font-size: 2.45rem;
   letter-spacing: 1px;
   margin: 0;
+  font-weight: 700;
 }
 
 .location-form input{
   width: 100%;
   border: none;
-  font-family: font(lato);
+  font-family: font(work);
+  font-weight: 400;
   padding: 0.25rem;
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   margin: 1.25rem 0;
 }
 
 .location-form button{
   background: none;
   border: 3px solid #fff;
-  font-family: font(montserrat);
+  font-family: font(work);
   color: #fff;
   font-size: 1.15rem;
   text-transform: uppercase;

@@ -21,8 +21,10 @@
   width: 100%;
   text-align: center;
   margin-bottom: 1.5rem;
+  cursor: pointer;
   span{
-    font-family: font(lato);
+    font-family: font(work);
+    font-weight: 400;
     color: color(green);
     font-size: 1rem;
     &:first-child{
@@ -36,9 +38,10 @@
 
 .store-filter h1{
   text-align: center;
-  font-family: font(montserrat);
+  font-family: font(passion);
+  font-size: 2.25rem;
+  font-weight: 400;
   color: color(green);
-  text-transform: uppercase;
   margin-top: 0;
 }
 
@@ -48,14 +51,15 @@
 }
 
 .store-filter__group h2{
-    font-family: font(montserrat);
-    text-transform: uppercase;
-    font-size: 1rem;
+    font-family: font(work);
+    font-weight: 500;
+    font-size: 1.15rem;
     margin: 0 0 0.5rem 0;
 }
 
 .store-filter__group label{
-  font-family: font(lato);
+  font-family: font(work);
+  font-weight: 400;
   font-size: 1rem;
 }
 
@@ -72,7 +76,7 @@
   transition: all 0.35s ease;
   background-color: color(green);
   color: #fff;
-  font-family: font(montserrat);
+  font-family: font(work);
   font-size: 0.9rem;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
