@@ -41,7 +41,8 @@
     margin: 0;
   }
   h2{
-    font-family: font(montserrat);
+    font-family: font(work);
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1rem;
@@ -72,7 +73,8 @@
 
 .store-detail__basic-info{
   width: 75%;
-  font-family: font(lato);
+  font-family: font(work);
+  font-weight: 400;
   font-size: 1.05rem;
 }
 
@@ -93,10 +95,10 @@
 
 .store-detail__subheader{
   color: color(orange);
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   margin: 0;
-  font-family: font(montserrat);
-  text-transform: uppercase;
+  font-family: font(work);
+  font-weight: 500;
   margin-bottom: 0.3rem;
 }
 

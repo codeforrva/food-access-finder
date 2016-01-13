@@ -8,6 +8,7 @@
 require './components/form.coffee'
 require './components/store_detail.coffee'
 require './components/store_filter.coffee'
+require './components/history.coffee'
 
 # dependencies
 require 'mapbox.js'

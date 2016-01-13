@@ -6,10 +6,11 @@
 # ----------------------------------
 
 # dependencies
-$           = require 'jquery'
-store_list  = require './store_list.coffee'
-map_helpers = require './map_helpers.coffee'
+$             = require 'jquery'
+store_list    = require './store_list.coffee'
+map_helpers   = require './map_helpers.coffee'
 error_message = require '../templates/error_message.jade'
+history       = require 'history'
 
 # config object
 _config =

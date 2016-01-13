@@ -1,0 +1,57 @@
+div(class="store-filter hidden")
+  h1 Filter By
+  .store-filter__toggles
+    span(class="select-all")
+      i(class="fa fa-check-square")
+      | Select All
+    span(class="unselect-all")
+      i(class="fa fa-check-square-o")
+      | Unselect All
+  .store-filter__group
+    h2 Store type
+    .checkbox
+      label
+        input(checked type="checkbox" name="farmers_market" value="farmers_market")
+        | Farmer's market
+    .checkbox
+      label
+        input(checked type="checkbox" name="healthy_corner_store" value="healthy_corner_store")
+        | Healthy Corner Store
+  .store-filter__group
+    h2 Food Offerings
+    .checkbox
+      label
+        input(checked type="checkbox" name="fruits" value="fruits")
+        | Fruits
+    .checkbox
+      label
+        input(checked type="checkbox" name="vegetables" value="vegetables")
+        | Vegetables
+    .checkbox
+      label
+        input(checked type="checkbox" name="grains" value="grains")
+        | Grains
+    .checkbox
+      label
+        input(checked type="checkbox" name="dairy" value="Dairy")
+        | Dairy
+    .checkbox
+      label
+        input(checked type="checkbox" name="protein" value="protein")
+        | Protein
+  .store-filter__group
+    h2 Benefits
+    .checkbox
+      label
+        input(checked type="checkbox" name="ebt" value="ebt")
+        | EBT
+    .checkbox
+      label
+        input(checked type="checkbox" name="snap" value="snap")
+        | SNAP
+    .checkbox
+      label
+        input(checked type="checkbox" name="wic" value="wic")
+        | WIC
+  .store-filter__actions
+    button(class="store-filter__actions__update") Update List
