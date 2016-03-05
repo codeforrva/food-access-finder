@@ -1,33 +1,28 @@
-@media only screen and (max-device-width: 480px) {
-  .location-form{
-    background-color: color(green);
-    width: 100%;
-    box-sizing: border-box;
-    position: fixed;
-    z-index: 10;
-    text-align: center;
-    margin-top: 25vh;
-    padding: 1.5rem 1rem;
-  }
 
+
+.location-form{
+  width: 100%;
+  background-color: color(green);
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10;
+  text-align: center;
+  margin-top: 25vh;
+  padding: 1.5rem 1rem;
+  /*@include mq(mobileLandscape){
+    background-color: #0B5A92;
+  };*/
 }
 
-@media only screen and (min-device-width: 481px){
-  .location-form{
-    background-color: color(purple);
-    width: 100%;
-    box-sizing: border-box;
-    position: fixed;
-    z-index: 10;
-    text-align: center;
-    margin-top: 40vh;
-    padding: 1.5rem 1rem;
+/*.sidePanel{
+  display:none;
+
+  @include mq(small){
+    display:block;
+    width:20vh;
+
   }
-}
-//full size
-
-
-
+}*/
 
 .location-form form{
   margin: 0;

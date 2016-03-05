@@ -21,11 +21,11 @@ $(document).ready () ->
   # Create a map in the div #map
   map = L.mapbox.map('map', 'mapbox.outdoors').setView [37.5333, -77.4667], 10
   map.on('moveend', handleMapMove = ->
-
-    centerVal = map.getCenter().lng + ","+map.getCenter().lat
-    if(centerVal)
-      form.findStores(centerVal, false, true);
-      $('#list-header-input').val(centerVal)
+    if(!form.isFirstLoad)
+      centerVal = map.getCenter().lng + ","+map.getCenter().lat
+      if(centerVal)
+       form.findStores(centerVal, false, true);
+       $('#list-header-input').val(centerVal)
   )
   storeLayer = L.mapbox.featureLayer().addTo map
 

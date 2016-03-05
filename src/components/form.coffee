@@ -83,6 +83,7 @@ getCurrentLocationFromNavigator = (msg)->
 $(document).ready ->
   $(_config.location_form).submit (e) ->
     e.preventDefault()
+    this.isFirstLoad = true
     _value = $('#location-input').val()
     findStores _value
   $(_config.update_submit).click (e) ->
@@ -95,3 +96,5 @@ $(document).ready ->
 
 module.exports.findStores = (location_query, is_update, user_move)->
   findStores(location_query, is_update, user_move)
+
+module.exports.isFirstLoad = false
