@@ -20,6 +20,7 @@ _            = require "lodash"
 # @param {function} next function
 getBaseLocation = (req, res, next) ->
   _query = req.body.query
+  console.log(req.body);
   mapbox.geocodeForward _query, (err, response) ->
     throw err if err
     if response.features.length == 0
@@ -27,7 +28,6 @@ getBaseLocation = (req, res, next) ->
     else
       req.baseLocation = response.features[0]
       next()
-
 # Returns a formatted store object suitable for
 # public api
 #

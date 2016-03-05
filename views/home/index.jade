@@ -3,7 +3,7 @@ extends ./main.jade
 block content
   div(class="list-header hidden")
     //- i(class="fa fa-filter")
-    input(type="text" name="location-header")
+    input(type="text" name="location-header" id="list-header-input")
     i(class="fa fa-search update-submit")
   //- include ./filter.jade
   #map(class="map form")
@@ -11,7 +11,10 @@ block content
     div(class="location-form")
       h1 Food for Health
       form(id="find-location")
-        input(type="text" ref="location" id="location-input" class="search" placeholder="Enter a Location")
+        div(id="location-search-input-container")
+          input(type="text" ref="location" id="location-input" class="search"  placeholder="Enter a Location")
+          button(id="geolocate-button" class="search-input-button-cap" )
         button(id="location-submit" type="submit" class="submit") Search
+
   #store-detail
   

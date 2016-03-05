@@ -19,6 +19,7 @@ _config =
   filter: ".fa-filter"
   errors:
     noLocation: "No Location could be determined from this request. Please try again"
+  geolocate_button: "#geolocate-button"
 
 # Updates display state of list-header, and adds
 # location query as input value
@@ -37,12 +38,17 @@ showError = ->
 #
 # @param {string} location_query
 # @param {string} is_update
-findStores = (location_query, is_update) ->
+findStores = (location_query, is_update, user_move) ->
   # new stores, not an update
   is_update = is_update || false
+  user_move = user_move || false
+  bounds=undefined
+  if user_move
+    bounds=map_helpers.getMapSize()
   # ajax request
   $.post '/api/stores',
     query: location_query
+    bounds: bounds
   .done (res) ->
     if res.data.stores.length > 0
       # format store data to be display friendly
@@ -56,9 +62,22 @@ findStores = (location_query, is_update) ->
       # update list header
       updateListHeader location_query
       # set map markers
-      map_helpers.setMarkers _stores, is_update
+      map_helpers.setMarkers _stores, is_update, user_move
+
     else
       showError()
+
+getCurrentLocationFromNavigator = (msg)->
+  navigator.geolocation.getCurrentPosition(
+    success = (e) ->
+      console.log("success "+e)
+      coords = e.coords
+      $('#location-input').val(coords.longitude+','+coords.latitude)
+      $('#location-submit').click()
+    fail = (e) ->
+      console.log("failed to search by location: " +e.message)
+  )
+
 
 # sets event listeners
 $(document).ready ->
@@ -68,6 +87,11 @@ $(document).ready ->
     findStores _value
   $(_config.update_submit).click (e) ->
     _value = $('input[name=location-header]').val()
-    findStores _value, true
+    findStores _value, true, false
   $(_config.filter).click (e) ->
     $('.store-filter').removeClass "hidden"
+  $(_config.geolocate_button).click (e) ->
+    getCurrentLocationFromNavigator "words";
+
+module.exports.findStores = (location_query, is_update, user_move)->
+  findStores(location_query, is_update, user_move)

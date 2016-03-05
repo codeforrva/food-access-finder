@@ -60,7 +60,8 @@ module.exports.formatStores = (stores) ->
       raw: stores[index].properties.category
       formatted: format_category stores[index].properties.category
     store.properties.distance = format_distance stores[index].properties.distance
-    stores[index] = store
+    if(window.map.getBounds().contains(store.geometry.coordinates))
+      stores[index] = store
   return stores
 
 # renders store list template with data

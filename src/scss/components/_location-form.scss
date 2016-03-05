@@ -1,13 +1,33 @@
-.location-form{
-  background-color: color(green);
-  width: 100%;
-  box-sizing: border-box;
-  position: fixed;
-  z-index: 10;
-  text-align: center;
-  margin-top: 50%;
-  padding: 1.5rem 1rem;
+@media only screen and (max-device-width: 480px) {
+  .location-form{
+    background-color: color(green);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    margin-top: 25vh;
+    padding: 1.5rem 1rem;
+  }
+
 }
+
+@media only screen and (min-device-width: 481px){
+  .location-form{
+    background-color: color(purple);
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10;
+    text-align: center;
+    margin-top: 40vh;
+    padding: 1.5rem 1rem;
+  }
+}
+//full size
+
+
+
 
 .location-form form{
   margin: 0;
@@ -24,12 +44,13 @@
 }
 
 .location-form input{
-  width: 100%;
+  width: 90%;
   border: none;
   font-family: font(work);
   font-weight: 400;
   padding: 0.25rem;
   font-size: 1.25rem;
+  max-width:350px;
   margin: 1.25rem 0;
 }
 
@@ -43,6 +64,18 @@
   letter-spacing: 1px;
   padding: 0.5rem 0.75rem;
   margin: 0;
+}
+
+.location-form button.search-input-button-cap{
+  width:32px;
+  border: none;
+  font-weight: 400;
+  //padding: 0.25rem 0.25rem 0rem 0.25rem;
+  height:32px;
+  background-image:url("http://fillmurray.com/32/32");
+  background-color:white;
+  font-size: 1.25rem;
+  margin: 1.25rem 0rem 0rem 0rem;
 }
 
 .error-message p{

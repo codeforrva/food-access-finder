@@ -8,7 +8,7 @@
 express      = require 'express'
 router       = express.Router()
 Stores       = require '../models/store.coffee'
-helpers = require '../helpers/storeHelpers.coffee'
+helpers      = require '../helpers/storeHelpers.coffee'
 
 # all storess
 router.get '/', (req, res) ->
@@ -17,7 +17,8 @@ router.get '/', (req, res) ->
 
 # sorts By distance
 router.post '/', helpers.getBaseLocation, (req, res) ->
-  Stores.within req.baseLocation.geometry.coordinates, 1000, (err, response, body) ->
+  console.log(req.body.bounds);
+  Stores.within req.baseLocation.geometry.coordinates, req.body.bounds || 1000, (err, response, body) ->
     _stores = helpers.transformCollection JSON.parse(body), req.baseLocation
     res.json
       status: 200
