@@ -41,5 +41,8 @@
     "react-dom": "0.14.3",
     "reactify": "^1.1.1",
     "turf": "^2.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }

@@ -6,7 +6,7 @@
   height: 100%;
   overflow-y: scroll;
   background: #fff;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   z-index: 20;
   box-sizing: border-box;
 
@@ -43,6 +43,7 @@
   font-weight: 400;
   color: color(green);
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .store-filter__group{

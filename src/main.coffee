@@ -25,7 +25,7 @@ $(document).ready () ->
       centerVal = map.getCenter().lng + ","+map.getCenter().lat
       if(centerVal)
        form.findStores(centerVal, false, true);
-       $('#list-header-input').val(centerVal)
+       $('#list-header-input').val('')
   )
   storeLayer = L.mapbox.featureLayer().addTo map
 

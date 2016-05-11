@@ -11,6 +11,9 @@ store_list    = require './store_list.coffee'
 map_helpers   = require './map_helpers.coffee'
 error_message = require '../templates/error_message.jade'
 history       = require 'history'
+filters       = require './store_filter.coffee'
+
+#TEST
 
 # config object
 _config =
@@ -45,6 +48,7 @@ findStores = (location_query, is_update, user_move) ->
   bounds=undefined
   if user_move
     bounds=map_helpers.getMapSize()
+    $('#list-header-input').val('')
   # ajax request
   $.post '/api/stores',
     query: location_query
@@ -53,6 +57,7 @@ findStores = (location_query, is_update, user_move) ->
     if res.data.stores.length > 0
       # format store data to be display friendly
       _stores = store_list.formatStores res.data.stores
+      _stores = filters.filterList(_stores)
       # add stores to global object
       window._stores = _stores
       # add location query to global object
@@ -79,6 +84,7 @@ getCurrentLocationFromNavigator = (msg)->
   )
 
 
+
 # sets event listeners
 $(document).ready ->
   $(_config.location_form).submit (e) ->
@@ -92,7 +98,8 @@ $(document).ready ->
   $(_config.filter).click (e) ->
     $('.store-filter').removeClass "hidden"
   $(_config.geolocate_button).click (e) ->
-    getCurrentLocationFromNavigator "words";
+    getCurrentLocationFromNavigator "words"
+
 
 module.exports.findStores = (location_query, is_update, user_move)->
   findStores(location_query, is_update, user_move)
