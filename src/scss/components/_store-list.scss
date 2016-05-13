@@ -24,7 +24,7 @@
 .store__info{
   width: 76%;
   word-wrap: break-word;
-  color: color(tan, dark);
+  color: color(grey);
   p, h2{
     margin: 0;
   }
@@ -34,6 +34,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 1rem;
+    color: color(green);
   }
   p{
     font-family: font(work);
@@ -55,9 +56,9 @@
 }
 
 .store.even{
-  background-color: color(tan, light);
+  border-bottom: 1px solid color(grey, light);
 }
 
 .store.odd{
-  background-color: color(tan);
+
 }

@@ -11,7 +11,8 @@ body { margin:0; padding:0; font-size: 12px;}
 // Colors
 $colors: (
   green: (
-    base: #78BB36
+    base: $teal,
+    light: $lightGreen
   ),
   tan: (
     base: #D1B99C,
@@ -19,21 +20,23 @@ $colors: (
     dark: #64594D
   ),
   grey: (
-    base: #808080
+    base: $darkGrey,
+    light: $lightGrey
   ),
   blue: (
     base: #40B1F4
   ),
   orange: (
-    base: #FF8736
+    base: $orange
   ),
   red: (
-    base: #FF0201
+    base: $red
   ),
   purple: (
-    base: #730091
+    base: $purple
   )
 );
+
 
 
 

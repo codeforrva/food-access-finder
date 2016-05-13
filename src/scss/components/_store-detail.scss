@@ -24,7 +24,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: color(tan);
+  background-color: color(grey, light);
 }
 
 .store-detail .fa-map-marker{
@@ -36,7 +36,7 @@
 .store-detail__info{
   width: 76%;
   word-wrap: break-word;
-  color: color(tan, dark);
+  color: color(green);
   p, h2{
     margin: 0;
   }
@@ -94,7 +94,7 @@
 }
 
 .store-detail__subheader{
-  color: color(orange);
+  color: color(green);
   font-size: 1.35rem;
   margin: 0;
   font-family: font(work);
