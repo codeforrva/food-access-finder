@@ -5,10 +5,12 @@
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  background: #fff;
-  padding: 1rem 1rem;
+//background: #f6f6f6;
+  padding: 1rem 25%;
   z-index: 20;
   box-sizing: border-box;
+  background: #FFEEDB;
+  background-image: url("../img/vaff-background.png");
 
   &.hidden{
     z-index: -1;
@@ -16,6 +18,8 @@
     padding: 0;
   }
 }
+
+
 
 .store-filter__toggles{
   width: 100%;
@@ -25,7 +29,7 @@
   span{
     font-family: font(work);
     font-weight: 400;
-    color: color(green);
+    color: color(orange);
     font-size: 1rem;
     &:first-child{
       margin-right: 1.5rem;
@@ -38,10 +42,10 @@
 
 .store-filter h1{
   text-align: center;
-  font-family: font(passion);
+  font-family: font(work);
   font-size: 2.25rem;
-  font-weight: 400;
-  color: color(green);
+  font-weight: 300;
+  color: color(orange);
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -53,9 +57,9 @@
 
 .store-filter__group h2{
     font-family: font(work);
-    font-weight: 500;
-    font-size: 1.15rem;
-    color: color(green);
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: color(orange);
     margin: 0 0 0.5rem 0;
 }
 
@@ -75,15 +79,39 @@
 }
 
 .store-filter__actions button{
+  
   transition: all 0.35s ease;
-  background-color: color(green);
+  background-color: color(orange);
   color: #fff;
   font-family: font(work);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  padding: 0.5rem 1rem;
+  padding: 1.3rem 4rem;
   border: none;
+  border-radius: 36px;
+  margin: 1rem 0rem 0rem 1rem;
+  min-width: 75px;
   &:hover{
-    background-color: lighten(color(green), 10);
+    background-color: darken(color(orange), 10);
   }
 }
+
+.store-filter__cancel button{
+  display: inline-block;
+  transition: all 0.35s ease;
+  background-color: color(orange);
+  color: #fff;
+  font-family: font(work);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 1.3rem 4rem;
+  border: none;
+  border-radius: 36px;
+  margin: 1rem 0rem 0rem 1rem;
+  min-width: 75px;
+  &:hover{
+    background-color: darken(color(orange), 10);
+  }
+}
+
+

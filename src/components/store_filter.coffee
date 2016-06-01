@@ -52,6 +52,8 @@ $(document).ready () ->
   $(".update_search_filters").click (e) ->
     $(".store-filter").addClass "hidden"
     form.findStores(window.map.getCenter().lng + ","+window.map.getCenter().lat, false, true)
+  $(".store-filter__cancel").click (e) ->
+    $(".store-filter").addClass "hidden"
 
 
 

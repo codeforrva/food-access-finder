@@ -1,9 +1,8 @@
 div(class="store-detail")
   div(class="strore-detail__header")
-    i(class="fa fa-map-marker")
+    i(class="icon-nav-back store-detail__close")
     div(class="store-detail__info")
-      h2 #{store.properties.title} • #{store.properties.distance}
-    i(class="fa fa-times-circle-o store-detail__close")
+      h1 #{store.properties.title} • #{store.properties.distance}
   div(class="store-detail__content")
     div(class="flex-container")
       div(class="store-detail__basic-info")
@@ -11,7 +10,7 @@ div(class="store-detail")
         p #{store.properties.address.city}, #{store.properties.address.state} #{store.properties.address.zip}
         if store.properties.phone
           a(class="store-detail__basic-info__phone" href="tel:" + store.properties.phone) #{store.properties.phone}
-      img(class="store-detail__basic-info__icon" src="/img/navigation-icon.png")
+      i(class="icon-directions store-detail__basic-info__icon")
     hr
     h3(class="store-detail__subheader") Nutrition Availability
     a(class="nutrition-info__my-plate" href="#") Learn More About MyPlate

@@ -1,10 +1,10 @@
 div(class="store-list")
   each store, index in stores
     div(class="store #{store.properties._count}" data-id="#{store.properties._id}")
-      i(class="fa fa-map-marker")
+      i(class="fa fa-map-marker icon-map-pin")
       div(class="store__info")
         h2 #{store.properties.title} • #{store.properties.distance}
         p!= store.properties.category.formatted
       span(class="fa-stack fa-lg")
-        i(class="fa fa-circle-o fa-stack-2x")
-        i(class="fa fa-chevron-right fa-stack-1x")
+        i(class="icon-nav-forward")
+        //i(class="fa fa-chevron-right fa-stack-1x")

@@ -30,17 +30,18 @@
   }
   h2{
     font-family: font(work);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1rem;
+    font-weight: 300;
+    //text-transform: uppercase;
+    //letter-spacing: 1px;
+    font-size: 1.1rem;
     color: color(green);
   }
   p{
     font-family: font(work);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 0.85rem;
     margin-top: 0.25rem;
+    text-transform: uppercase;
   }
 }
 
@@ -55,10 +56,32 @@
   }
 }
 
+.icon-nav-forward {
+  font-size: 2rem;
+  color: color(orange);
+}
+
+.icon-nav-back {
+  font-size: 2rem;
+  color: color(orange);
+}
+
 .store.even{
   border-bottom: 1px solid color(grey, light);
 }
 
 .store.odd{
 
+}
+
+.distance {
+    display: inline-block;
+    background-color: color(orange);
+    padding: .5rem;
+    font-size: .75rem;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    margin-left: 1rem;
 }
