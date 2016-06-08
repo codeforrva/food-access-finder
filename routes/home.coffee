@@ -12,4 +12,7 @@ router  = express.Router()
 router.get '/', (req, res) ->
   res.render 'home/index'
 
+router.get '/meetmyplate', (req, res) ->
+	res.render 'home/meetmyplate'
+
 module.exports = router
