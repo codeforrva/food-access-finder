@@ -1,13 +1,7 @@
 extends ./main.jade
 
 block content
-  div(class="list-header hidden")
-    //- i(class="fa fa-filter")
-    input(type="text" placeholder="Enter another Location" name="location-header" id="list-header-input")
-    i(class="fa fa-search update-submit")
-    i(class="fa fa-filter filter icon-filter")
-
-    include ./filter.jade
+  include ./filter.jade
   #map(class="map form")
   #content
     div(class="location-form")
