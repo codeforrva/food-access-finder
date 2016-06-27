@@ -31,11 +31,15 @@ gulp.task 'images', ->
   gulp.src './src/img/**/*.*'
   .pipe gulp.dest './dist/img/'
 
+gulp.task "fonts", ->
+  gulp.src './src/font/**/*.*'
+  .pipe gulp.dest './dist/font/'
+
 gulp.task 'watch', ['browserify:watch', 'sass:watch']
 
 gulp.task 'default', ['watch']
 
-gulp.task 'build', ['browserify', 'sass', 'images']
+gulp.task 'build', ['browserify', 'sass', 'images', 'fonts']
 
 gulp.task "browserify:client", ->
   gulp.src 'src/templates/store_detail.jade',
