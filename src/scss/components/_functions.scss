@@ -2,9 +2,103 @@
     @return map-get(map-get($colors, $color), $tone);
 }
 
+@function breakpoint($breakpoints) {
+    @return map-get($breakpoints, $breakpoint);
+}
+
 @function font($font){
     @return map-get($fonts, $font);
 }
+
+@mixin breakpoint($point) {
+  @if $point == large { /* 1000px/16px = 62.5em */
+    @media (min-width: $large) { @content; }
+  }
+  @else if $point == medium { /* 768px/16px = 48em */
+    @media (min-width: $medium) { @content; }
+  }
+  @else if $point == small { /* 560px/16px = 35em */
+    @media (min-width: $small)  { @content; }
+  }
+  @else if $point == xsmall { /* 320px/16px = 20em */
+    @media (min-width: $xsmall)  { @content; }
+  } 
+  @else { //adding a custom option
+    @media (min-width: $point)  { @content; }    
+  }
+}
+
+
+/* ##### Flexbox ##### */
+@mixin flexbox($important:null) {
+  /* Old Syntax */
+  display: -webkit-box $important;
+  display: -moz-box $important;
+
+  /* Current Syntax */
+  display: -webkit-flex $important;
+  display: -moz-flex $important;
+  display: -o-flex $important;
+  display: -ms-flex $important;
+  display: flex $important;
+}
+
+@mixin flex($val) {
+  /* flex: none; Default value */
+  -webkit-box-flex: 1; /* Hard set to 1 to fix older Safari flex */
+  -moz-box-flex:  $val;
+  -webkit-flex:  $val;
+  -ms-flex:  $val;
+  flex:  $val;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin justify($val, $important:null) {
+  -webkit-justify-content: $val $important;
+     -moz-justify-content: $val $important;
+      -ms-justify-content: $val $important;
+          justify-content: $val $important;
+}
+
+@mixin align($val, $important:null) {
+  -webkit-align-items: $val $important;
+   -moz-align-items: $val $important;
+    -ms-align-items: $val $important;
+        align-items: $val $important;
+}
+
+@mixin flexwrap($val) {
+   -webkit-flex-wrap: $val;
+   flex-wrap: $val;
+}
+
+@mixin flexdirection($val) {
+  -webkit-flex-direction: $val;
+   flex-direction: $val;
+}
+
+@mixin flexgrow($val) {
+  -webkit-flex-grow: $val;
+     -moz-flex-grow: $val;
+      -ms-flex-grow: $val;
+          flex-grow: $val;
+}
+
+@mixin alignself($val) {
+  -webkit-align-self: $val;
+     -moz-align-self: $val;
+      -ms-align-self: $val;
+          align-self: $val;
+}
+
+/* ##### End Flexbox ##### */
 
 @mixin clearfix {
   &:after {
