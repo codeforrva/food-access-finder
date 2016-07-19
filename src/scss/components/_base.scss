@@ -1,11 +1,36 @@
-body { margin:0; padding:0; font-size: 12px;}
+body { 
+  margin:0; 
+  padding:0; 
+  font-size: 12px;
+  
+  @include breakpoint(large) {
+    @include flexbox();
+  }
+}
 
 .map{
   position: absolute;
   top:0;
   width:100%;
-  height: 100vh;
+  height: 40%;
   z-index: 5;
+
+  @include breakpoint(large) {
+    width:60vw;
+    height:100vh;
+    @include order(2);
+  }
+}
+
+.results {
+  @include breakpoint(large) {
+    width:40vw;
+    @include order(1);
+
+    @include breakpoint(large) {
+      height:100vh;
+    }
+  }
 }
 
 // Colors
@@ -38,14 +63,12 @@ $colors: (
 );
 
 
-
-
 // fonts
 $fonts: (
   montserrat: ('Montserrat', sans-serif),
   lato: ('Lato', sans-serif),
   work: ('Work Sans', sans-serif),
-  vaff: ('vaff', sans-serif),
+  vaff: ('vaff', sans-serif)
   //titillium: ('Titillium Web', sans-serif),
   //passion: ('Passion One', sans-serif)
 );
