@@ -70,6 +70,5 @@ module.exports.formatStores = (stores) ->
 module.exports.render = (stores) ->
   $('#content').empty().append store_list
     stores: stores
-  document.getElementById('map').style.height = "40vh"
   document.getElementById('map').style.position = "relative"
   $('#content').addClass 'results'
