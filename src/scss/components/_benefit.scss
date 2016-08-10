@@ -5,13 +5,14 @@
 
 .benefit{
   border: 2px solid color(grey);
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 0.5rem 0.75rem;
-  font-family: font(lato);
+  font-family: font(work);
   text-transform: uppercase;
   margin-right: 0.75rem;
   font-size: 0.95rem;
   color: color(grey);
+  font-weight: 500;
 }
 
 .benefit.active{

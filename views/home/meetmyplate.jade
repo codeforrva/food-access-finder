@@ -1,4 +1,49 @@
 extends ./main.jade
 
 block content
-	h1 this is the meet myplate page!
+
+    .container-hero-teal
+    .myplate-title
+      h1.myplate Meet MyPlate
+    .myplate-diagram-container
+      img.myplate-diagram(src='img/myplate-diagram.svg', alt='')
+    .container
+      h2.myplate.myplate-detail-header Helping you find healthy options
+      p
+        | MyPlate features the five food groups that are part of a healthy diet: fruits, vegetables, grains, protein and dairy.
+      .using-myplate
+        .using-myplate-detail
+          h2.myplate.myplate-detail-header Using MyPlate
+          p
+            | The MyPlate icon tells you what types of healthy food options are in each store. A store must sell at least three varieties of a food group, in fresh, frozen or canned format to fill in that section of MyPlate.
+        .using-myplate-img
+          img.myplate-no-veg(src='img/myplate-no-veg.png', alt='')
+      h2.myplate.myplate-detail-header Promoting healthier guidelines
+      p
+        | Using MyPlate guidelines, we surveyed stores to help you find healthy food choices where you live, work and shop.
+      .myplate-guidelines
+        .myplate-guidelines-item
+          i.icon.icon-can
+          .myplate-detail
+            h3.myplate.myplate-detail-header Canned
+            p.myplate-detail-description
+              | Canned beans, vegetables, fish and poultry have 290 mg or less sodium per serving. Canned fruits are in 100% juice.
+        .myplate-guidelines-item
+          i.icon.icon-ice-crystal
+          .myplate-detail
+            h3.myplate.myplate-detail-header Frozen
+            p.myplate-detail-description Frozen fruits and vegetables have no added sugar, fat or salt.
+        .myplate-guidelines-item
+          i.icon.icon-grain
+          .myplate-detail
+            h3.myplate.myplate-detail-header Whole Grain
+            p.myplate-detail-description
+              | All grains are whole grain. Brown rice and oatmeal are always whole grain and all other whole grain products list “whole” as the first word on the ingredient list.
+        .myplate-guidelines-item
+          i.icon.icon-milk
+          .myplate-detail
+            h3.myplate.myplate-detail-header Low-fat Dairy
+            p.myplate-detail-description Dairy products are made with 1% or skim milk.
+    .cta-nav
+      button#find-food.btn Store Details
+      button#search-again.btn Search Again

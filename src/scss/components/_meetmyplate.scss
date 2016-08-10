@@ -1,0 +1,214 @@
+		html {
+		    font-size: 1em;
+		}
+		body {
+		    background-color: white;
+		    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+		    font-weight: 300;
+		    line-height: 1.45;
+		    color: #808080;
+		    margin: 0;
+		}
+		p {
+		    margin-bottom: 1.3em;
+		    font-size: 1.2em;
+		}
+		p.lead {
+		    font-weight: 100;
+		    font-size: 1.777em;
+		}
+		h1,
+		h2,
+		h3,
+		h4 {
+		    margin: 1.414em 0 0.5em;
+		    font-weight: inherit;
+		    line-height: 1.2;
+		    font-weight: 700;
+		}
+		h1 {
+		    margin-top: 0;
+		    font-size: 4.157em;
+		}
+		h2 {
+		    font-size: 2.369em;
+		}
+		h3 {
+		    font-size: 1.777em;
+		}
+		h4 {
+		    font-size: 1.333em;
+		}
+		small,
+		.font_small {
+		    font-size: 0.75em;
+		}
+		.myplate-title {
+		    background-color: color(blue);
+		    background-image: url("img/vaff-background-path.png");
+		    background-size: 1000px;
+		    color: #ffffff;
+		    padding: 10%;
+		}
+		.container {
+		    margin: 10%;
+		    margin-top: 0;
+		}
+		.container-hero-teal {
+		    background-color: color(blue);
+		}
+		.myplate-diagram {
+		    display: block;
+		    margin: 0 auto;
+		    position: relative;
+		    top: -15vw;
+		    width: 65vw;
+		}
+		img.myplate-no-veg {
+		    display: inline-block;
+		}
+		.using-myplate {
+		    width: 100%;
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		}
+		.using-myplate-detail {
+		    display: inline-block;
+		    width: 60%;
+		    margin-right: 5%;
+		}
+		.using-myplate-img {
+		    display: inline-block;
+		    width: 30%;
+		    vertical-align: center;
+		}
+		.myplate-guidelines {
+		    width: 100%;
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		}
+		.myplate-guidelines-item {
+		    width: 40%;
+		    display: inline-block;
+		    margin: 5%;
+		}
+		.cta-nav {
+		    width: 100%;
+		    text-align: center;
+		}
+		button.btn {
+		    font-size: 1.1rem;
+		    text-transform: uppercase;
+		    padding: 1.3rem 4rem;
+		    border-radius: 36px;
+		    margin: 1rem 0rem 0rem 1rem;
+		    min-width: 75px;
+		}
+		button #find-food {
+		    display: inline-block;
+		    background: color(orange);
+		    color: #ffffff;
+		    border: none;
+		    &:hover {
+		        background-color: darken(color(orange), 10);
+		    }
+		}
+		button #search-again {
+		    display: inline-block;
+		    background: none;
+		    color: color(orange);
+		    border: 1px solid color(orange);
+		    &:hover {
+		        background-color: darken(color(orange), 10);
+		    }
+		}
+		.myplate-detail {
+		    width: 100%;
+		    display: inline-block;
+		    /*margin: 5%;*/
+		}
+		.myplate-detail-header {
+		    color: #652D90;
+		}
+		.icon {
+		    display: block;
+		    margin: 0 auto;
+		    font-size: 15vw;
+		    text-align: center;
+		}
+		.icon-can {} .icon-ice-crystal {
+		    color: #177CB3;
+		}
+		.icon-grain {
+		    color: color(orange);
+		}
+		.icon-milk {
+		    color: #00ADEE;
+		}
+		@media only screen and (max-width: 480px) {
+		    .myplate-diagram {
+		        display: block;
+		        margin: 0 auto;
+		        position: relative;
+		        top: -15vw;
+		        width: 65vw;
+		    }
+		    .cta-nav {
+		        margin: 3rem 0 0 0;
+		    }
+		}
+		@media only screen and (max-width: 768px) {
+		    .myplate-diagram {
+		        display: block;
+		        margin: 0 auto;
+		        top: -15vw;
+		        width: 75vw;
+		    }
+		    .myplate-diagram-container {
+		        height: 55vw;
+		    }
+		    .myplate-guidelines {
+		        flex-direction: column;
+		    }
+		    .myplate-guidelines-item {
+		        width: 100%;
+		        display: inline-block;
+		        margin: 0%;
+		    }
+		    p.myplate-detail-description {
+		        width: 100%;
+		    }
+		    .icon {
+		        font-size: 30vw;
+		    }
+		    h1 .myplate{
+		        font-size: 4.157em;
+		    }
+		    .cta-nav {
+		        margin: 3rem 0 0 0;
+		    }
+		    .using-myplate-detail {
+		        display: inline-block;
+		        width: 100%;
+		        padding-right: 1rem;
+		    }
+		    .using-myplate-img {
+		        display: inline-block;
+		        width: 100%;
+		        text-align: center;
+		        vertical-align: center;
+		    }
+		}
+		@media only screen and (min-width: 1100px) {
+		    .myplate-diagram {
+		        display: block;
+		        margin: 0 auto;
+		        top: -20vh;
+		        width: 55vw;
+		    }
+		    h1 {
+		        font-size: 5.157em;
+		    }
+		}
