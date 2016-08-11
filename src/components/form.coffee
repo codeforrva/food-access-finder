@@ -55,6 +55,7 @@ findStores = (location_query, is_update, user_move) ->
     bounds: bounds
   .done (res) ->
     if res.data.stores.length > 0
+	  $('#map').removeClass('home-map')
       # format store data to be display friendly
       _stores = store_list.formatStores res.data.stores
       _stores = filters.filterList(_stores)
