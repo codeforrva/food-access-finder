@@ -10,7 +10,7 @@ store =
   #
   # @param {function} callback function
   all: (cb) ->
-    request.get ' https://brigades.opendatanetwork.com/resource/q524-g4xp.json',(err, response, body) ->
+    request.get "foodapi.codeforrva.org/api/v1/stores", (err, response, body) ->
       cb? err, response, body
 
   # Returns all stores within a given radius from a lat/latLng

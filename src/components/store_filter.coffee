@@ -6,30 +6,27 @@
 
 # dependencies
 $ = require "jquery"
-form = require './form.coffee'
+form = require "./form.coffee"
 
-filters = {
-  'snap': {
-    value: 'snap',
+filters =
+  snap:
+    value: "snap"
     include: true
-  },
-  'wic':{
-  value: 'wic',
-  include: true
-  },
-  'ebt':{
-  value: 'ebt',
-  include: true
-  }
-}
+  wic:
+    value: "wic"
+    include: true
+  ebt:
+    value: "ebt"
+    include: true
+  healthy_corner_store:
+    value: "healthy_corner_store"
+    include: true
 
-module.exports.filterList= (storeList) ->
-  console.log(storeList)
+module.exports.filterList = (storeList) ->
   filteredList = []
-  for i in [0...storeList.length]
-    store = storeList[i]
+  for store in storeList
     category = store.properties.category.raw
-    if (filters[category].include)
+    if filters[category].include
       filteredList.push(store)
   return filteredList
 
@@ -54,7 +51,3 @@ $(document).ready () ->
     form.findStores(window.map.getCenter().lng + ","+window.map.getCenter().lat, false, true)
   $(".store-filter__cancel").click (e) ->
     $(".store-filter").addClass "hidden"
-
-
-
-

@@ -20,7 +20,6 @@
 }
 
 
-
 .store-filter__toggles{
   width: 100%;
   text-align: center;
@@ -79,7 +78,7 @@
 }
 
 .store-filter__actions button{
-  
+
   transition: all 0.35s ease;
   background-color: color(orange);
   color: #fff;
@@ -113,5 +112,3 @@
     background-color: darken(color(orange), 10);
   }
 }
-
-

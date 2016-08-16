@@ -13,13 +13,11 @@ error_message = require '../templates/error_message.jade'
 history       = require 'history'
 filters       = require './store_filter.coffee'
 
-#TEST
-
 # config object
 _config =
   location_form: "#find-location"
   update_submit: ".update-submit"
-  filter: ".fa-filter"
+  filter: ".filter"
   errors:
     noLocation: "No Location could be determined from this request. Please try again"
   geolocate_button: "#geolocate-button"
@@ -87,6 +85,7 @@ getCurrentLocationFromNavigator = (msg)->
 
 # sets event listeners
 $(document).ready ->
+  $(_config.filter).hide()
   $(_config.location_form).submit (e) ->
     e.preventDefault()
     this.isFirstLoad = true
@@ -95,7 +94,8 @@ $(document).ready ->
   $(_config.update_submit).click (e) ->
     _value = $('input[name=location-header]').val()
     findStores _value, true, false
-  $(_config.filter).click (e) ->
+  $("#content").on "click", _config.filter, (e) ->
+    console.log "Filter Clicked"
     $('.store-filter').removeClass "hidden"
   $(_config.geolocate_button).click (e) ->
     getCurrentLocationFromNavigator "words"
