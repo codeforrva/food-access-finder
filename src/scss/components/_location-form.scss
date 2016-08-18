@@ -12,82 +12,78 @@
   /*@include mq(mobileLandscape){
     background-color: #0B5A92;
   };*/
-}
 
-/*.sidePanel{
-  display:none;
+  /*.sidePanel{
+    display:none;
 
-  @include mq(small){
-    display:block;
-    width:20vh;
+    @include mq(small){
+      display:block;
+      width:20vh;
 
+    }
+  }*/
+
+  form{
+    margin: 0;
+    padding: 0;
   }
-}*/
 
-.location-form form{
-  margin: 0;
-  padding: 0;
+  h1{
+    font-family: font(work);
+    color: #fff;
+    font-size: 2.45rem;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  input{
+    width: 90%;
+    border: none;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 100;
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    max-width: 350px;
+    margin: 1.25rem 0;
+    letter-spacing: 0.05rem;
+    line-height: 2rem;
+    border-radius: 25px;
+    padding-left: 1.1rem;
+  }
+
+  button{
+    background: color(orange);
+    border: 0px;
+    /*border: 2px solid #fff;*/
+    font-family: font(work);
+    color: #fff;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.75rem 2rem;
+    /*padding: 0.5rem 0.75rem;*/
+    margin: 0;
+    border-radius: 36px;
+    &:hover {
+      background-color: darken(color(orange), 10);
+    }
+    &.search-input-button-cap{
+      border: none;
+      font-weight: 500;
+      height:32px;
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+      /*margin-left: -4rem;*/
+      margin-left: -5.5rem;
+      color: color(orange);
+      background: none;
+      &:hover {
+        color: darken(color(orange), 10);
+      }
+    }
+  }
 }
-
-.location-form h1{
-  font-family: font(work);
-  color: #fff;
-  font-size: 2.45rem;
-  letter-spacing: 1px;
-  margin: 0;
-  font-weight: 700;
-}
-
-.location-form input{
-  width: 90%;
-  border: none;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 100;
-  padding: 0.25rem;
-  font-size: 1.25rem;
-  max-width: 350px;
-  margin: 1.25rem 0;
-  letter-spacing: 0.05rem;
-  line-height: 2rem;
-  border-radius: 25px;
-  padding-left: 1.1rem;
-
-}
-
-.location-form button{
-  background: color(orange);
-  border: 0px;
-  /*border: 2px solid #fff;*/
-  font-family: font(work);
-  color: #fff;
-  font-size: 1.15rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 0.75rem 2rem;
-  /*padding: 0.5rem 0.75rem;*/
-  margin: 0;
-  border-radius: 36px;
-  &:hover {
-            background-color: darken(color(orange), 10);
-        }
-}
-
-
-.location-form button.search-input-button-cap{
-  border: none;
-  font-weight: 500;
-  height:32px;
-  font-size: 1.5rem;
-  padding-bottom: 2rem;
-  /*margin-left: -4rem;*/
-  margin-left: -5.5rem;
-  color: color(orange);
-  background: none;
-  &:hover {
-            color: darken(color(orange), 10);
-        }
-}
-
 .error-message p{
   font-family: font(lato);
   color: #DC593C;
