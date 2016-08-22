@@ -10,7 +10,8 @@
   z-index: 20;
   box-sizing: border-box;
   background: #FFEEDB;
-  background-image: url("../img/vaff-background.png");
+  background-image: url("../img/vaff-background-tile.png");
+  background-repeat: repeat;
 
   &.hidden{
     z-index: -1;
@@ -43,7 +44,7 @@
   text-align: center;
   font-family: font(work);
   font-size: 2.25rem;
-  font-weight: 300;
+  font-weight: 700;
   color: color(orange);
   margin-top: 0;
   margin-bottom: 1rem;
@@ -56,7 +57,7 @@
 
 .store-filter__group h2{
     font-family: font(work);
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.3rem;
     color: color(orange);
     margin: 0 0 0.5rem 0;
@@ -85,11 +86,11 @@
   font-family: font(work);
   font-size: 1.1rem;
   text-transform: uppercase;
-  padding: 1.3rem 4rem;
+  padding: 1rem 4rem;
   border: none;
   border-radius: 36px;
   margin: 1rem 0rem 0rem 1rem;
-  min-width: 75px;
+  min-width: 12rem;
   &:hover{
     background-color: darken(color(orange), 10);
   }

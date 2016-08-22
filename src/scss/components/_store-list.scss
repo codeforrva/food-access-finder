@@ -35,6 +35,7 @@
     //letter-spacing: 1px;
     font-size: 1.1rem;
     color: color(green);
+    margin-left: 1rem;
   }
   p{
     font-family: font(work);
@@ -42,6 +43,7 @@
     font-size: 0.85rem;
     margin-top: 0.25rem;
     text-transform: uppercase;
+    margin-left: 1rem;
   }
 }
 
@@ -57,6 +59,7 @@
 }
 
 .icon-nav-forward {
+  transition: all 0.35s ease;
   font-size: 2rem;
   color: color(orange);
   &:hover {
@@ -65,6 +68,7 @@
 }
 
 .icon-nav-back {
+  transition: all 0.35s ease;
   font-size: 2rem;
   color: color(orange);
   &:hover {
@@ -77,7 +81,7 @@
 }
 
 .store.odd{
-
+  border-bottom: 1px solid color(grey, light);
 }
 
 .distance {

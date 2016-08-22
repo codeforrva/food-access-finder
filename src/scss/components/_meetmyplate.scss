@@ -44,9 +44,8 @@
 		    font-size: 0.75em;
 		}
 		.myplate-title {
-		    background-color: color(blue);
-		    background-image: url("img/vaff-background-path.png");
-		    background-size: 1000px;
+		    background-color: color(green);
+		    background-image: url("../img/vaff-background-tile-15.png");
 		    color: #ffffff;
 		    padding: 10%;
 		}
@@ -55,7 +54,7 @@
 		    margin-top: 0;
 		}
 		.container-hero-teal {
-		    background-color: color(blue);
+		    background-color: color(green);
 		}
 		.myplate-diagram {
 		    display: block;
@@ -100,29 +99,37 @@
 		}
 		button.btn {
 		    font-size: 1.1rem;
+			font-family: font(work);
+			font-weight: 400;
 		    text-transform: uppercase;
 		    padding: 1.3rem 4rem;
 		    border-radius: 36px;
 		    margin: 1rem 0rem 0rem 1rem;
 		    min-width: 75px;
+		    border: none;
+
 		}
-		button #find-food {
+		button.store-details {
 		    display: inline-block;
-		    background: color(orange);
+		    transition: all 0.35s ease;
+		    background-color: color(orange);
 		    color: #ffffff;
 		    border: none;
+		    color: #fff;
 		    &:hover {
 		        background-color: darken(color(orange), 10);
 		    }
 		}
-		button #search-again {
-		    display: inline-block;
-		    background: none;
-		    color: color(orange);
-		    border: 1px solid color(orange);
-		    &:hover {
-		        background-color: darken(color(orange), 10);
-		    }
+		button.search-again {
+			display: inline-block;
+			  transition: all 0.35s ease;
+			  background-color: #fff;
+			  color: color(orange);
+			  border: 2px solid color(orange);
+			  &:hover{
+			    background-color: darken(color(orange), 10);
+			    color: #fff;
+			  }
 		}
 		.myplate-detail {
 		    width: 100%;
@@ -201,7 +208,8 @@
 		        vertical-align: center;
 		    }
 		}
-		@media only screen and (min-width: 1100px) {
+
+		@media only screen and (min-width: 1000px) {
 		    .myplate-diagram {
 		        display: block;
 		        margin: 0 auto;

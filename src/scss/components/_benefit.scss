@@ -4,8 +4,8 @@
 }
 
 .benefit{
-  border: 2px solid color(grey);
-  border-radius: 25px;
+  /*border: 2px solid color(grey);*/
+  /*border-radius: 25px;*/
   padding: 0.5rem 0.75rem;
   font-family: font(work);
   text-transform: uppercase;
@@ -17,5 +17,5 @@
 
 .benefit.active{
   color: color(orange);
-  border-color: color(orange);
+  /*border-color: color(orange);*/
 }

@@ -13,9 +13,11 @@
   overflow-y: scroll;
   z-index: 1000;
   opacity: 1;
+  background-color: color(green);
+  background-image: url('../img/vaff-background-tile-15.png');
 }
 
-.strore-detail__header{
+.store-detail__header{
 
   box-sizing: border-box;
   padding: 1rem;
@@ -57,8 +59,10 @@
 }
 
 .store-detail__content{
-  padding: 1rem;
+  padding: 0rem;
   box-sizing: border-box;
+  background-color: #fff;
+  
 }
 
 .store-detail__content hr{
@@ -68,7 +72,7 @@
   border-top: 1px solid lighten(color(grey), 40);
   margin: 2rem auto;
   padding: 0;
-  width: 90%;
+  width: 100%;
 }
 
 .store-detail__basic-info{
@@ -91,6 +95,7 @@
 
 .store-detail__basic-info__icon{
   //width: 25%;
+  transition: all 0.35s ease;
   font-size: 7rem;
   color: color(blue);
   &:hover {
@@ -109,4 +114,67 @@
 
 .nutrition-info__my-plate{
   font-size: 0.85rem;
+}
+
+.store-detail__myplate-diagram {
+  
+}
+
+.store-detail__map {
+  display: block;
+  width: 100%;  
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .store-detail__content {
+      /* padding: 1rem; */
+      box-sizing: border-box;
+      margin: 0rem 0rem;
+      background-color: #fff;
+      padding: 3rem;
+  }
+  .store-detail__header {
+      padding: 1rem 5rem;
+  }
+  .store-detail__map {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px){
+    .store-detail__content {
+      /* padding: 1rem; */
+      box-sizing: border-box;
+      margin: 0rem 5rem;
+      background-color: #fff;
+      padding: 3rem 2rem 3rem 2rem;
+  }
+  .store-detail__header {
+      padding: 1rem 5rem;
+    }
+  .store-detail__map {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1223px) {
+    .store-detail__content {
+      /* padding: 1rem; */
+      box-sizing: border-box;
+      margin: 0rem 10rem;
+      background-color: #fff;
+      padding: 3rem;
+  }
+  .store-detail__header {
+      padding: 1rem 5rem;
+    }
+}
+@media screen and (min-width: 1224px) {
+    .store-detail__content {
+      /* padding: 1rem; */
+      box-sizing: border-box;
+      margin: 0rem 13rem;
+      background-color: #fff;
+      padding: 3rem;
+  }
+    
 }

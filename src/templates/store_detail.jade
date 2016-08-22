@@ -1,10 +1,11 @@
 div(class="store-detail")
-  div(class="strore-detail__header")
+  div(class="store-detail__header")
     i(class="icon-nav-back store-detail__close")
     div(class="store-detail__info")
       h1 #{store.properties.title} • #{store.properties.distance}
   div(class="store-detail__content")
     div(class="flex-container")
+        img(src="../img/location-detail-map-placeholder.jpg" class="store-detail__map")
       div(class="store-detail__basic-info")
         p!= store.properties.address.street
         p #{store.properties.address.city}, #{store.properties.address.state} #{store.properties.address.zip}
@@ -13,7 +14,7 @@ div(class="store-detail")
       i(class="icon-directions store-detail__basic-info__icon")
     hr
     h3(class="store-detail__subheader") Nutrition Availability
-    a(class="nutrition-info__my-plate" href="#") Learn more about MyPlate
+    a(class="nutrition-info__my-plate" href="/meetmyplate") Learn more about MyPlate
     div(class="flex-container")
       div(class="nutrition-list")
         span(class="fruit") Fruit
@@ -21,7 +22,9 @@ div(class="store-detail")
         span(class="protein") Protein
         span(class="grains") Grains
         span(class="vegetables") Vegatables
+    div(class="store-detail__myplate-diagram")
+      img(src="../img/myplate-diagram.svg")
     hr
-    h3(class="store-detail__subheader") Benefits Welcome
+    h3(class="store-detail__subheader") Benefits
     div(class="flex-container benefits")
       span(class="benefit active")!= store.properties.category.formatted
