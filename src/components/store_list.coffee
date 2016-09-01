@@ -71,4 +71,5 @@ module.exports.render = (stores) ->
   $('#content').empty().append store_list
     stores: stores
   document.getElementById('map').style.position = "relative"
+  $('body').addClass 'results-view'
   $('#content').addClass 'results'

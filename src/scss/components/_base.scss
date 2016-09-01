@@ -3,9 +3,12 @@ body {
   padding:0;
   font-size: 12px;
 
-  @include breakpoint(large) {
-    @include flexbox();
+  &.results-view {
+    @include breakpoint(large) {
+      @include flexbox();
+    }    
   }
+
 }
 
 .map{
